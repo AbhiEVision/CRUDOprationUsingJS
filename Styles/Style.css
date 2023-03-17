@@ -1,0 +1,238 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+#page-title {
+    text-align: center;
+    font-size: 40px;
+    background-color: rgba(88, 241, 139, 0.144);
+    padding: 25px;
+    width: 100vw;
+}
+
+#form-title {
+    font-size: 30px;
+    margin: 20px 10% 0px 10%;
+    text-align: center;
+}
+
+#close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#close-btn button{
+    cursor: pointer;
+    padding: 0px;
+    border: none;
+    outline: none;
+    background-color:rgba(88, 241, 139, 0.144);
+}
+
+#close-btn button img {
+    width: 15px;
+}
+
+#update {
+    display: none;
+    width: 100px !important;
+}
+
+#PopUPForm {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgba(70, 224, 122, 0.815);
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 20px rgba(black, 0.2);
+    transition: opacity 0.2s ease-out;
+    font-size: 20px;
+}
+
+
+#nothing {
+    flex-direction: row;
+    justify-content: start;
+    padding-left: 25%;
+    padding-top: 50px;
+    font-size: 30px;
+}
+
+#product-image, #product-price, #product-id, #product-name, #product-description {
+    display: flex;
+    flex-direction: column;
+    margin: 30px; 
+}
+
+#PName, #PPrice,#PID , #PDisc{
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid green;
+    outline: 0;
+    font-size: 1rem;
+    color: black;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+    width: auto;
+}
+
+#PName:focus, #PPrice:focus,#PID:focus,#PDisc:focus {
+    border-bottom: 1px solid rgb(0, 255, 0);
+} 
+
+.product-span {
+    font-size: 15px;
+}
+
+#product-image input{
+    border: 1px solid green;
+    padding: 3px;
+}
+
+#btns {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#btns button {
+    width: 30%;
+    margin: 10px 10%;
+    background: none;
+    border: none;
+    color: rgb(78, 78, 78);
+    cursor: pointer;
+    outline: none;
+}
+
+#btns button:hover {
+    color: black;
+    font-weight: bold;
+    border-bottom: 1px solid green;
+}
+
+th{
+    background-color: rgba(34, 34, 255, 0.726);
+    padding: 10px;
+}
+
+#show-data-container {
+    margin-left: 15%;
+    margin-top: 5%;
+    width: 100%;
+    /* justify-content: center; */
+
+}
+
+#show-data-table {
+    border:none;
+    border-collapse: collapse;
+}
+
+.table-id {
+    width: 100px;
+    text-align: center;
+    border: none;
+    padding: 30px;
+}
+
+.table-image img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.table-image {
+    text-align: center;
+    width: 300px;
+    padding: 10px;
+    border: none;
+}
+
+.table-price {
+    text-align: center;
+    width: 100px;
+    border: none;
+    max-width: 100px;
+    word-wrap: break-word;
+    padding: 30px;
+}
+
+.table-desc {
+    text-align: center;
+    width: 200px;
+    max-width: 200px;
+    border: none;
+    word-wrap: break-word;
+    padding: 30px;
+}
+
+.table-name {
+    text-align: center;
+    width: 100px;
+    border: none;
+    max-width: 100px;
+    word-wrap: break-word;
+    padding: 30px;
+}
+
+.table-buttons {
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    padding: 30px;
+}
+
+.table-row {
+    background-color: rgba(85, 85, 231, 0.425);
+    border: none;
+}
+
+.table-row .table-image {
+    height :200px;
+}
+
+.table-btn {
+    width: 50px;
+    height: 50px;
+    margin: 20px 0px 20px 30px;
+    background-color: none;
+}
+
+.blur   {
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+}
+
+#__id,#__name, #__price {
+    cursor: pointer;
+}
+
+#add-btn, #clear-btn {
+    margin: 10px;
+    padding: 15px;
+    font-size: medium;
+    color : white;
+    background-color: rgba(35, 14, 221, 0.815);
+    border-radius: 15px;
+}
+
+#search-bar {
+    font-size: medium;
+    height: 40px;
+    border-radius: 15px;
+    width: 300px;
+    padding: 5px;
+    padding-left: 10px;
+}
