@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Product Management System</title>
+
+        <link rel="stylesheet" href="Styles/Style.css">
+        <script src="Script/Refrences.js" defer></script>
+        <script src="Script/Form.js" defer></script>
+        <script src="Script/CRUD.js" defer></script>
+        <script src="Script/Table.js" defer></script>
+
+        <!--font awsomeness-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <div id="page-title">
+            Product Management
+        </div>
+
+        <div id="core-buttons">
+            <button id="add-btn" onclick="OpenForm(true)"> Add Item</button>
+            <button id="clear-btn" onclick="ClearDatabase()">Clear Every Item</button>
+            <input id="search-bar" type="text" placeholder="Search By Id or Name" onkeyup="processChange()">
+        </div>
+
+        <!-- table for showing data-->
+        <div id="show-data-container">
+            <table id="show-data-table">
+                <thead>
+                    <tr id="table-head">
+                        <th class="table-id" id="__id" onclick="FilterByID()">Product Id</th>
+                        <th class="table-name" id="__name" onclick="FilterByName()">Product Name</th>
+                        <th class="table-image">Product Image</th>
+                        <th class="table-desc">Product Description</th>
+                        <th class="table-price" id="__price" onclick="FilterByPrice()">Product Price</th>
+                        <th class="table-buttons">Action</th>
+                    </tr>
+                </thead>
+                
+                <tbody id="store-here">
+
+                </tbody>
+               
+            </table>
+            <div id="nothing">
+                Nothing to show you
+            </div>
+        </div>
+        <!-- form for adding data -->
+        <div id="PopUPForm">
+            <fieldset style="margin: 8px;">
+                <legend style="text-align: center;">Add Product</legend>
+                <div id="close-btn">
+                    <button onclick="CloseForm()">
+                        <img src="https://img.icons8.com/external-inkubators-basic-outline-inkubators/32/null/external-close-button-it-and-computer-inkubators-basic-outline-inkubators.png"/>
+                    </button>
+                </div>
+                <div id="form-title">
+                    Product Details
+                </div>
+                <form id="container" onsubmit="submitFormReturn()">
+                    <div id="product-id">
+                        <span class="product-span">Product ID :</span>
+                        <input id="PID" type="text" disabled value="" size="12">
+                    </div>
+                    <div id="product-name">
+                        <span class="product-span">Name :</span>
+                        <input id="PName" type="text" required>
+                    </div>
+                    <div id="product-image">
+                        <span class="product-span">Product Image :</span>
+                        <input type="file" id="PImage" accept="Image/jpg, Image/png, Image/jpeg" onchange="imageUploaded()">
+                    </div>
+                    <div id="product-price">
+                        <span class="product-span">Price :</span>
+                        <input type="number" inputmode="numeric" pattern="\d*" id="PPrice" required>
+                    </div>
+                    <div id="product-description">
+                        <span class="product-span">Description :</span>
+                        <textarea name="description" id="PDisc" cols="30" rows="3" required></textarea>
+                    </div>
+                    
+                </form>
+                <div id="btns">
+                    <button id="add" onclick="AddProduct()">Add</button>
+                    <button id="clear" type="reset" onclick="ClearForm()">Clear Details</button>
+                    <button id="update" onclick="UpdateProduct()">Update Product</button>
+                </div>
+            </fieldset>
+        </div>
+
+        <!--showing form data-->
+        
+
+    </body>
+</html>
