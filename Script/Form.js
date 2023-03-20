@@ -127,8 +127,7 @@ function UpdateProduct() {
         pname = GetProductName(),
         pdesc = GetProductDescription(),
         pimage = GetProductImage(),
-        pprice = GetProduct
-    Price();
+        pprice = GetProductPrice();
 
     const data = { id: pid, name: pname, image: pimage, desc: pdesc, price: pprice }
 

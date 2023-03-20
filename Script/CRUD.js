@@ -63,7 +63,7 @@ function UpdateDataByID(x) {
                 data[i].name = x.name;
                 data[i].price = x.price;
                 data[i].desc = x.desc;
-                if (x.image != data[i].image && x.image != null) {
+                if (x.image != data[i].image && x.image != null && x.image != "") {
                     data[i].image = x.image;
                 }
                 break;
