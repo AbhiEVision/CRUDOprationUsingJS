@@ -64,7 +64,7 @@
                 <form id="container" onsubmit="submitFormReturn()">
                     <div id="product-id">
                         <span class="product-span">Product ID :</span>
-                        <input id="PID" type="text" disabled value="" size="12">
+                        <input id="PID" type="text" disabled value="" size="12" required>
                     </div>
                     <div id="product-name">
                         <span class="product-span">Name :</span>
@@ -72,7 +72,7 @@
                     </div>
                     <div id="product-image">
                         <span class="product-span">Product Image :</span>
-                        <input type="file" id="PImage" accept="Image/jpg, Image/png, Image/jpeg" onchange="imageUploaded()">
+                        <input type="file" id="PImage" accept="Image/jpg, Image/png, Image/jpeg" onchange="imageUploaded()" required>
                     </div>
                     <div id="product-price">
                         <span class="product-span">Price :</span>
@@ -83,9 +83,10 @@
                         <textarea name="description" id="PDisc" cols="30" rows="3" required></textarea>
                     </div>
                     
+                    
                 </form>
                 <div id="btns">
-                    <button id="add" onclick="AddProduct()">Add</button>
+                    <button id="add" type="submit" onclick="AddProduct()">Add</button>
                     <button id="clear" type="reset" onclick="ClearForm()">Clear Details</button>
                     <button id="update" onclick="UpdateProduct()">Update Product</button>
                 </div>
