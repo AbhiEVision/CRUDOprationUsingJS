@@ -42,6 +42,7 @@ ShowDataInTable();
 
 function FilterByPrice(){
     const data = GetItems();
+    if(data != null || data != undefined){
     data.sort((a,b)=>{
         if(a.price < b.price){
             return -1;
@@ -51,24 +52,28 @@ function FilterByPrice(){
         return 0;
     })
 
-    ShowDataInTable(data);
+    ShowDataInTable(data);}
 }
 
 function FilterByName(){
     const data = GetItems();
-    data.sort((a,b)=>{
-        if(a.name.toLowerCase() < b.name.toLowerCase()){
-            return -1;
-        } else if(a.name.toLowerCase() > b.name.toLowerCase()){
-            return 1;
-        }
-        return 0;
-    })
-    ShowDataInTable(data);
+    if(data != null || data != undefined){
+        data.sort((a,b)=>{
+            if(a.name.toLowerCase() < b.name.toLowerCase()){
+                return -1;
+            } else if(a.name.toLowerCase() > b.name.toLowerCase()){
+                return 1;
+            }
+            return 0;
+        })
+        ShowDataInTable(data);
+    }
+    
 }
 
 function FilterByID(){
     const data = GetItems();
+    if(data != null || data != undefined){
     data.sort((a,b)=>{
         if(Number(a.id) < Number(b.id)){
             return -1;
@@ -77,7 +82,7 @@ function FilterByID(){
         }
         return 0;
     })
-    ShowDataInTable(data);
+    ShowDataInTable(data);}
 }
 
 function debounce(func, timeout = 300){

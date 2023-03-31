@@ -46,7 +46,7 @@ function CloseForm() {
     FORM.style.display = "none";
     ClearForm();
     BlurRemove();
-    ShowDataInTable();
+    
 }
 
 function ClearForm() {
